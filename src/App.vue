@@ -1,30 +1,47 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <swiper>
+        <swiper-item >
+            <img src="./assets/img/10.jpg" />
+        </swiper-item>
+          <swiper-item >
+            <img src="./assets/img/11.jpg" />
+        </swiper-item>
+          <swiper-item >
+            <img src="./assets/img/12.jpg" />
+        </swiper-item>
+          <swiper-item >
+            <img src="./assets/img/13.jpg" />
+        </swiper-item>
+          <swiper-item >
+            <img src="./assets/img/14.jpg" />
+        </swiper-item>
+          <swiper-item >
+            <img src="./assets/img/15.jpg" />
+        </swiper-item>
+          <swiper-item >
+            <img src="./assets/img/16.jpg" />
+        </swiper-item>
+    </swiper>
+   </div>
 </template>
-
+<script>
+    import swiper from "./components/swiper"
+    import SwiperItem from "./components/swiperItem";
+    export default{
+      name:'app',
+      components:{
+          SwiperItem,
+        swiper
+      },
+        data()
+        {
+            return {
+                imgList:[]
+            }
+        }
+    }
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
